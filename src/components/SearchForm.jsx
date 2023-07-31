@@ -1,24 +1,21 @@
-import React, { useState } from 'react'
-
 const SearchForm = () => {
-  const [search, setSearch] = useState('')
-
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(search);
+    const searchValue = e.target.elements.search.value
+    if (!searchValue) return
+    console.log(searchValue);
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <section>
+      <h1 className='title'>unsplash images</h1>
+      <form onSubmit={handleSubmit} className='search-form'>
         <input type="text" name='search'
-          placeholder='cat' className='search-input'
-          value={search}
-          onChange={e => setSearch(e.target.value)} />
-        {/* form-input */}
-        <button type='submit'>search</button>
+          placeholder='cat' className='search-input form-input'
+        />
+        <button type='submit' className='btn'>search</button>
       </form>
-    </div>
+    </section>
   )
 }
 
