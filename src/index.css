@@ -351,6 +351,10 @@ Search Form
   border-radius: 0;
 }
 
+.form-input {
+  color: var(--textColor);
+}
+
 /* 
 ========
 Gallery
