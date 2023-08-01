@@ -51,7 +51,7 @@ html {
   --transition: 0.3s ease-in-out all;
   --max-width: 1120px;
   --fixed-width: 600px;
-  --view-width: 90vw;
+  --fluid-width: 90vw;
   /* box shadow*/
   --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
@@ -301,20 +301,84 @@ PROJECT CSS
 ========
 */
 
+main {
+  max-width: var(--max-width);
+  width: var(--fluid-width);
+  margin: 0 auto;
+  margin-top: 1.25rem;
+}
+
 /* 
 ========
 Toggle Container
 ========
 */
+.toggle-container {
+  display: flex;
+  justify-content: flex-end;
+}
 
+.dark-toggle {
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  font-size: 1.5rem;
+}
+
+.toggle-icon {
+  color: var(--white);
+}
 /* 
 ========
 Search Form
 ========
 */
+.title {
+  color: var(--primary-500);
+  margin-top: 1.25rem;
+  margin-bottom: 2rem;
+  font-size: 5rem;
+}
+
+.search-form {
+  display: flex;
+  max-width: var(--fixed-width);
+  margin: 0 auto;
+}
+
+.btn,
+.form-input {
+  border-radius: 0;
+}
 
 /* 
 ========
 Gallery
 ========
 */
+.image-container {
+  margin: 3rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.loading {
+  margin-top: 3rem;
+}
+
+.img {
+  max-height: 160px;
+}
+
+@media (max-width: 991px) {
+  .image-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .image-container {
+    grid-template-columns: 1fr;
+  }
+}

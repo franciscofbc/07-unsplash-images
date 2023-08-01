@@ -11,7 +11,7 @@ const ThemeToggle = () => {
         {isDarkTheme ? (
           <BsFillMoonFill className="toggle-icon" />
         ) : (
-          <BsFillSunFill className="toggle-icon" />
+          <BsFillSunFill />
         )}
       </button>
     </section>

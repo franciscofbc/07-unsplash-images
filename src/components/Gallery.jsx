@@ -15,7 +15,7 @@ const Gallery = () => {
   });
 
   if (isLoading) {
-    return <section className="loading image-container"></section>;
+    return <section className="loading"></section>;
   }
 
   if (isError) {
@@ -46,7 +46,6 @@ const Gallery = () => {
             key={item.id}
             alt={item.alt_description}
             className="img"
-            style={{ width: '150px' }}
           />
         );
       })}
